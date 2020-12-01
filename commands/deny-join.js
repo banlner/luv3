@@ -3,10 +3,10 @@ const chalk = require('chalk');
 require('dotenv').config();
 
 exports.run = async (client, message, args) => {
-    if(!message.member.roles.cache.some(role =>["Ranking Permissions", "Join Request Permissions"].includes(role.name))){
+    if(!message.member.roles.cache.some(role =>["Staff"].includes(role.name))){
         return message.channel.send({embed: {
             color: 16733013,
-            description: "You need the `Ranking Permissions` or `Join Request Permissions` role to run this command.",
+            description: "You need to be a London Underground Staffing member to use this commmand",
             author: {
                 name: message.author.tag,
                 icon_url: message.author.displayAvatarURL()

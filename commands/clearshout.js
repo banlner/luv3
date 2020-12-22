@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
     if(!message.member.roles.cache.some(role =>["Staff"].includes(role.name))){
         return message.channel.send({embed: {
             color: 16733013,
-            description: "You need to be a London Underground Staffing member to use this command",
+            description: "You need to be Metro Staff Member to use this command",
             author: {
                 name: message.author.tag,
                 icon_url: message.author.displayAvatarURL()

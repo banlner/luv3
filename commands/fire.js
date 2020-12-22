@@ -22,10 +22,10 @@ async function getRankFromName(func_rankname, func_group){
 }
 
 exports.run = async (client, message, args) => {
-    if(!message.member.roles.cache.some(role =>["Head of Department"].includes(role.name))){
+    if(!message.member.roles.cache.some(role =>["Executive"].includes(role.name))){
         return message.channel.send({embed: {
             color: 16733013,
-            description: "You need to be a London Underground Head of Department to use this commmand",
+            description: "You need to be a Metro Executive to use this commmand",
             author: {
                 name: message.author.tag,
                 icon_url: message.author.displayAvatarURL()
